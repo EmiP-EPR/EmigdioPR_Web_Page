@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>EmigdioPR</title>
+  <title>EmiP</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
+      text-align: center;
     }
     
     .app-bar {
@@ -22,39 +23,60 @@
     .content {
       padding: 20px;
     }
+    
+    h2 {
+      color: #333;
+    }
+    
+    .guess-input {
+      padding: 10px;
+      margin: 10px;
+    }
+    
+    .result-message {
+      margin-top: 20px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
   <div class="app-bar">
-    <h1>EmigdioPR Web</h1>
+    <h1>EmigdioPR-WebPage</h1>
   </div>
   
   <div class="content">
-    <h2>Contenido de la pagina</h2>
-    <p>Esta es una pagina web de prueba en versiones futuras tendra contenido.</p>
+    <h2>Adivina el número</h2>
+    <p>Estoy pensando en un número del 1 al 100. ¿Puedes adivinar cuál es?</p>
+  
+    <input type="number" class="guess-input" id="guessInput">
+    <button onclick="checkGuess()">Adivinar</button>
+  
+    <p id="resultMessage"></p>
   </div>
-  <div class="content">
-  <h2>Bienvenido a nuestra página web</h2>
-  <p>En nuestra empresa nos dedicamos a ofrecer soluciones innovadoras en tecnología. Contamos con un equipo de expertos en desarrollo de software, diseño web y marketing digital para ayudar a nuestros clientes a alcanzar sus metas.</p>
   
-  <h3>Nuestros servicios</h3>
-  <ul>
-    <li>Desarrollo de aplicaciones web y móviles</li>
-    <li>Diseño y creación de páginas web a medida</li>
-    <li>Optimización de motores de búsqueda (SEO)</li>
-    <li>Estrategias de marketing digital</li>
-    <li>Análisis de datos y estadísticas</li>
-  </ul>
-  
-  <h3>¿Por qué elegirnos?</h3>
-  <p>En nuestra empresa nos enfocamos en la calidad, la innovación y la satisfacción del cliente. Trabajamos de cerca con nuestros clientes para entender sus necesidades y ofrecer soluciones personalizadas que impulsen su éxito.</p>
-  
-  <p>Además, contamos con un equipo altamente capacitado y siempre estamos al tanto de las últimas tendencias y tecnologías en el mercado. Nos apasiona lo que hacemos y nos esforzamos por superar las expectativas en cada proyecto.</p>
-  
-  <h3>Contáctanos</h3>
-  <p>Si estás interesado en nuestros servicios o tienes alguna pregunta, no dudes en ponerte en contacto con nosotros. Estamos disponibles para atender tus consultas y ofrecerte la mejor solución para tu negocio.</p>
-  
-  <p>Puedes contactarnos a través del siguiente correo electrónico: info@tuempresa.com o llamarnos al número: +123456789.</p>
-</div>
+  <script>
+    var randomNumber = Math.floor(Math.random() * 100) + 1;
+    var resultMessage = document.getElementById("resultMessage");
+    
+    function checkGuess() {
+      var guessInput = document.getElementById("guessInput");
+      var guess = parseInt(guessInput.value);
+      
+      if (guess === randomNumber) {
+        resultMessage.innerHTML = "¡Felicitaciones! ¡Has adivinado el número correctamente!";
+        resultMessage.style.color = "green";
+        guessInput.disabled = true;
+      } else if (guess < randomNumber) {
+        resultMessage.innerHTML = "El número es más alto. Sigue intentando.";
+        resultMessage.style.color = "red";
+      } else if (guess > randomNumber) {
+        resultMessage.innerHTML = "El número es más bajo. Sigue intentando.";
+        resultMessage.style.color = "red";
+      }
+      
+      guessInput.value = "";
+      guessInput.focus();
+    }
+  </script>
 </body>
 </html>
