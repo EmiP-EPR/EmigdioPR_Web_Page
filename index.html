@@ -1,82 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>EmiP</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    
-    .app-bar {
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-    }
-    
-    .app-bar h1 {
-      margin: 0;
-    }
-    
-    .content {
-      padding: 20px;
-    }
-    
-    h2 {
-      color: #333;
-    }
-    
-    .guess-input {
-      padding: 10px;
-      margin: 10px;
-    }
-    
-    .result-message {
-      margin-top: 20px;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Privacidad - GRUPO NERGIUM FIX SAS DE CV</title>
 </head>
 <body>
-  <div class="app-bar">
-    <h1>EmigdioPR-WebPage</h1>
-  </div>
-  
-  <div class="content">
-    <h2>Adivina el número</h2>
-    <p>Estoy pensando en un número del 1 al 100. ¿Puedes adivinar cuál es?</p>
-  
-    <input type="number" class="guess-input" id="guessInput">
-    <button onclick="checkGuess()">Adivinar</button>
-  
-    <p id="resultMessage"></p>
-  </div>
-  
-  <script>
-    var randomNumber = Math.floor(Math.random() * 100) + 1;
-    var resultMessage = document.getElementById("resultMessage");
-    
-    function checkGuess() {
-      var guessInput = document.getElementById("guessInput");
-      var guess = parseInt(guessInput.value);
-      
-      if (guess === randomNumber) {
-        resultMessage.innerHTML = "¡Felicitaciones! ¡Has adivinado el número correctamente!";
-        resultMessage.style.color = "green";
-        guessInput.disabled = true;
-      } else if (guess < randomNumber) {
-        resultMessage.innerHTML = "El número es más alto. Sigue intentando.";
-        resultMessage.style.color = "red";
-      } else if (guess > randomNumber) {
-        resultMessage.innerHTML = "El número es más bajo. Sigue intentando.";
-        resultMessage.style.color = "red";
-      }
-      
-      guessInput.value = "";
-      guessInput.focus();
-    }
-  </script>
+
+    <h1>AVISO DE PRIVACIDAD</h1>
+
+    <p>De conformidad con lo establecido en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, GRUPO NERGIUM FIX SAS DE CV pone a su disposición el siguiente aviso de privacidad.</p>
+
+    <p>GRUPO NERGIUM FIX SAS DE CV, es responsable del uso y protección de sus datos personales, en este sentido y atendiendo las obligaciones legales establecidas en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, a través de este instrumento se informa a los titulares de los datos, la información que de ellos se recaba y los fines que se le darán a dicha información.</p>
+
+    <p>Además de lo anterior, informamos a usted que GRUPO NERGIUM FIX SAS DE CV, tiene su domicilio ubicado en:</p>
+
+    <address>
+        Colina esmeralda 198 fracc. colinas de San Isidro Leon Guanajuato México C.P. 37530
+    </address>
+
+    <p>Los datos personales que recabamos de usted serán utilizados para las siguientes finalidades, las cuales son necesarias para concretar nuestra relación con usted, así como para atender los servicios y/o pedidos que solicite:</p>
+
+    <ul>
+        <li>Establecer una cuenta para acceder a los servicios del analizador de raciones OPTIBALANCE</li>
+    </ul>
+
+    <p>Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos personales:</p>
+
+    <ul>
+        <li>Nombre y apellidos</li>
+        <li>Domicilio</li>
+        <li>Teléfono</li>
+        <li>Email</li>
+    </ul>
+
+    <p>Por otra parte, informamos a usted que sus datos personales no serán compartidos con ninguna autoridad, empresa, organización o persona distintas a nosotros y serán utilizados exclusivamente para los fines señalados.</p>
+
+    <p>Usted tiene en todo momento el derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta (Rectificación); de igual manera, tiene derecho a que su información se elimine de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada adecuadamente (Cancelación); así como también a oponerse al uso de sus datos personales para fines específicos (Oposición). Estos derechos se conocen como derechos ARCO.</p>
+
+    <p>Para el ejercicio de cualquiera de los derechos ARCO, se deberá presentar la solicitud respectiva a través de la siguiente dirección electrónica: <a href="https://www.nergium-fix.com">https://www.nergium-fix.com</a></p>
+
+    <!-- Agrega el resto de la información según tu necesidad -->
+
+    <p>Última actualización: 20/11/2023</p>
+
 </body>
 </html>
